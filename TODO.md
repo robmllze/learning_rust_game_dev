@@ -1,0 +1,28 @@
+# TODO:
+
+- [ ] Learn Rust, following a tutorial
+- [ ] Investigate advanced features
+- [ ] Learn winit, following a tutorial
+- [ ] Learn game development basics (structure, state management, etc.)
+- [ ] File reading and writing
+- [ ] Playing sounds
+- [ ] Loading fonts and displaying text
+- [ ] Loading textures and displaying images
+- [ ] Working with duration and timers (for animations)
+- [ ] Understand vertex shaders
+- [ ] Understand fragment shaders
+- [ ] Drawing basic 2D shapes (e.g., rectangles, circles)
+- [ ] Learn wgpu, following a tutorial
+- [ ] Text input
+- [ ] Networking (TCP/UDP communication)
+- [ ] Sending/receiving game data over the network
+- [ ] Calling APIs
+- [ ] Multithreading
+- [ ] Handling 2D transforms (scale, rotation, translation)
+- [ ] Futures and async programming
+- [ ] Creating animations and sprite sheets
+- [ ] Using serde for serialization
+- [ ] Saving game data
+- [ ] Making RESTful API requests
+- [ ] Learn about wasm32 and web dev
+- [ ] Learn about Steam and consoles 
