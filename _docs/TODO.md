@@ -17,6 +17,7 @@
 - [ ] Networking (TCP/UDP communication)
 - [ ] Sending/receiving game data over the network
 - [ ] Calling APIs
+- [ ] Learn Bevy
 - [ ] Multithreading
 - [ ] Handling 2D transforms (scale, rotation, translation)
 - [ ] Futures and async programming
