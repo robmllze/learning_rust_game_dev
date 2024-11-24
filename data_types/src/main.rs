@@ -1,8 +1,10 @@
 // -----------------------------------------------------------------------------
-// Variables
+// Data Types
 // -----------------------------------------------------------------------------
 
 use std::io::{self, Write};
+
+// -----------------------------------------------------------------------------
 
 fn main() {
     // Variables are saved in stack memory.
@@ -79,7 +81,11 @@ fn main() {
         .trim()
         .parse()
         .expect("Index entered was not a number!");
-    println!("You entered {A} and the value here is {B}", A = index, B = a[index]);
+    println!(
+        "You entered {A} and the value here is {B}",
+        A = index,
+        B = a[index]
+    );
 }
 
 // -----------------------------------------------------------------------------
@@ -87,3 +93,6 @@ fn main() {
 fn type_of<T>(_: &T) -> &'static str {
     std::any::type_name::<T>()
 }
+
+// Type definition.
+type integer = i32;
