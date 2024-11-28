@@ -1,11 +1,13 @@
 //! A simple 3D scene with light shining over a cube sitting on a plane.
 
+use bevy::input::keyboard::KeyboardInput;
 use bevy::prelude::*;
 
 fn main() {
     App::new()
         .add_plugins(DefaultPlugins)
         .add_systems(Startup, setup)
+        .add_systems(Update, camera_rotation)
         .run();
 }
 
@@ -40,9 +42,31 @@ fn setup(
     });
     // camera
     commands.spawn(Camera3dBundle {
-        transform: Transform::from_xyz(-2.5, 4.5, 9.0).looking_at(Vec3::ZERO, Vec3::Y),
+        transform: Transform::from_xyz(0.0, 4.5, 9.0).looking_at(Vec3::ZERO, Vec3::Y),
         ..default()
     });
+}
+
+fn camera_rotation(
+    keys: Res<ButtonInput<KeyCode>>,
+    mut query: Query<&mut Transform, With<Camera3d>>,
+) {
+    const ROTATION_SPEED: f32 = 1.0;
+
+    for mut transform in query.iter_mut() {
+        if keys.pressed(KeyCode::ArrowLeft) {
+            transform.rotate_y(ROTATION_SPEED * -0.02);
+        }
+        if keys.pressed(KeyCode::ArrowRight) {
+            transform.rotate_y(ROTATION_SPEED * 0.02);
+        }
+        if keys.pressed(KeyCode::ArrowUp) {
+            transform.rotate_x(ROTATION_SPEED * -0.02);
+        }
+        if keys.pressed(KeyCode::ArrowDown) {
+            transform.rotate_x(ROTATION_SPEED * 0.02);
+        }
+    }
 }
 
 // //! Shows how to render simple primitive shapes with a single color.
