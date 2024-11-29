@@ -27,7 +27,7 @@ fn main() {
     let _a = [1, 2, 3, 4, 5];
     let b = [..3];
     println!("{}", b.len());
-}
+ }
 
 fn first_word_end_index(s: &String) -> usize {
     let bytes = s.as_bytes();
